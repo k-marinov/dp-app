@@ -1,0 +1,2 @@
+protocol DependencyProviding: ServiceProviding, UtilityProviding {
+}
