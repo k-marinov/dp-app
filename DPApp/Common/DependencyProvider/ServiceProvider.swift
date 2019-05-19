@@ -1,4 +1,3 @@
-
 class ServiceProvider {
 
     private var instances = [String: Service]()
@@ -13,8 +12,7 @@ class ServiceProvider {
 
     private func instance<SERVICE: Service>(key: String, provider: DependencyProviding) -> SERVICE {
         let service = SERVICE(provider: provider)
-        instances[key] = SERVICE(provider: provider)
-        print("number of instances", instances.count)
+        instances[key] = service
         return service
     }
 

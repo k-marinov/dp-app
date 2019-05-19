@@ -2,7 +2,6 @@
 
 class MockDependencyProvider: DependencyProviding {
 
-
     private let serviceMocks: [String: Service.Type] = [
         "\(UserService.self)": MockUserService.self,
         "\(AccountService.self)": MockAccountService.self,
@@ -22,7 +21,6 @@ class MockDependencyProvider: DependencyProviding {
 
     func register<SERVICE>(provider: DependencyProviding) -> SERVICE where SERVICE : Service {
         let realClassKey: String = "\(SERVICE.self)"
-
         let mockType = mockServiceType(with: provider, realClassKey: realClassKey)
         addMock(key: "\(mockType)", value: mockType.init(provider: provider))
         return mocks["\(mockType)"] as! SERVICE

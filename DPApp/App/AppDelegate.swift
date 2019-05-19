@@ -5,8 +5,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
 
-    var userViewController: UserViewController {
-        return UserViewController(viewModel:  UserViewModel(provider: DependencyProvider()))
+    var provider: DependencyProvider = {
+        return DependencyProvider()
+    }()
+
+    private var userViewController: UserViewController {
+        return UserViewController(viewModel:  UserViewModel(provider: provider))
     }
 
     func application(
