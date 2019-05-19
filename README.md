@@ -1,4 +1,5 @@
 # DI App
+Blog -> https://medium.com/@kenmarin_23370/common-way-of-managing-dependencies-of-an-ios-app-24bf5b4522b
 
 ## Developer Prerequisites
 
