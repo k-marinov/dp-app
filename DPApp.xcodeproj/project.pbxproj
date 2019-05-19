@@ -33,6 +33,7 @@
 		B6A5A4E8228A275100D78B38 /* DependencyProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5A4B5228A126F00D78B38 /* DependencyProviding.swift */; };
 		B6A5A4E9228A276100D78B38 /* MockDependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5A4CE228A12E000D78B38 /* MockDependencyProvider.swift */; };
 		B6A5A4EB2291814000D78B38 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A5A4EA2291814000D78B38 /* UserViewController.xib */; };
+		B6A5A4ED22918C6000D78B38 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B6A5A4EC22918C6000D78B38 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		B6A5A4E4228A22BE00D78B38 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		B6A5A4E6228A252C00D78B38 /* UtilityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityProvider.swift; sourceTree = "<group>"; };
 		B6A5A4EA2291814000D78B38 /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		B6A5A4EC22918C6000D78B38 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		B6A5A475228A117C00D78B38 = {
 			isa = PBXGroup;
 			children = (
+				B6A5A4EC22918C6000D78B38 /* README.md */,
 				B6A5A480228A117C00D78B38 /* DPApp */,
 				B6A5A495228A117D00D78B38 /* DPAppTests */,
 				B6A5A47F228A117C00D78B38 /* Products */,
@@ -336,6 +339,7 @@
 			files = (
 				B6A5A48C228A117D00D78B38 /* LaunchScreen.storyboard in Resources */,
 				B6A5A4EB2291814000D78B38 /* UserViewController.xib in Resources */,
+				B6A5A4ED22918C6000D78B38 /* README.md in Resources */,
 				B6A5A489228A117D00D78B38 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
