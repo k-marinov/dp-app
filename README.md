@@ -28,7 +28,7 @@ Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)
 
 ## Dependency Injection with Single Instance Services by using Service Locator Pattern
 
-This project is a new take on the on the previous Dependency Injection project [https://github.com/k-marinov/di-app.git]
+This project is a new take on the on the previous Dependency Injection project https://github.com/k-marinov/di-app.git
 
 But in this flavour of the dependency provider, services or dependencies are registered once and added to a dictionary where migh be available 
 for other classes via dependency provider.
