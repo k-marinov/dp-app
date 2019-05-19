@@ -2,7 +2,7 @@ class UserViewModel {
 
     private let userService: UserService
     private let accountService: AccountService
-    private var friendService: FriendService!
+    private let friendService: FriendService
 
     required init(provider: DependencyProviding) {
         userService = provider.register(provider: provider)
