@@ -10,7 +10,6 @@
 		B6A5A489228A117D00D78B38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6A5A488228A117D00D78B38 /* Assets.xcassets */; };
 		B6A5A48C228A117D00D78B38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A5A48A228A117D00D78B38 /* LaunchScreen.storyboard */; };
 		B6A5A4A7228A123900D78B38 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5A4A6228A123900D78B38 /* UserViewModel.swift */; };
-		B6A5A4AA228A124600D78B38 /* UserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A5A4A8228A124600D78B38 /* UserViewController.storyboard */; };
 		B6A5A4AB228A124600D78B38 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5A4A9228A124600D78B38 /* UserViewController.swift */; };
 		B6A5A4B0228A125700D78B38 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5A4AC228A125600D78B38 /* AccountService.swift */; };
 		B6A5A4B1228A125700D78B38 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5A4AD228A125700D78B38 /* UserService.swift */; };
@@ -33,6 +32,7 @@
 		B6A5A4E7228A252C00D78B38 /* UtilityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5A4E6228A252C00D78B38 /* UtilityProvider.swift */; };
 		B6A5A4E8228A275100D78B38 /* DependencyProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5A4B5228A126F00D78B38 /* DependencyProviding.swift */; };
 		B6A5A4E9228A276100D78B38 /* MockDependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5A4CE228A12E000D78B38 /* MockDependencyProvider.swift */; };
+		B6A5A4EB2291814000D78B38 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A5A4EA2291814000D78B38 /* UserViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,6 @@
 		B6A5A492228A117D00D78B38 /* DPAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DPAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A5A498228A117D00D78B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6A5A4A6228A123900D78B38 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		B6A5A4A8228A124600D78B38 /* UserViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserViewController.storyboard; sourceTree = "<group>"; };
 		B6A5A4A9228A124600D78B38 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B6A5A4AC228A125600D78B38 /* AccountService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		B6A5A4AD228A125700D78B38 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		B6A5A4D1228A12E000D78B38 /* MockUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUserService.swift; sourceTree = "<group>"; };
 		B6A5A4E4228A22BE00D78B38 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		B6A5A4E6228A252C00D78B38 /* UtilityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityProvider.swift; sourceTree = "<group>"; };
+		B6A5A4EA2291814000D78B38 /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,8 +165,8 @@
 		B6A5A4A4228A122000D78B38 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B6A5A4A8228A124600D78B38 /* UserViewController.storyboard */,
 				B6A5A4A9228A124600D78B38 /* UserViewController.swift */,
+				B6A5A4EA2291814000D78B38 /* UserViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -244,9 +244,9 @@
 			children = (
 				B6A5A4B6228A126F00D78B38 /* DependencyProvider.swift */,
 				B6A5A4B5228A126F00D78B38 /* DependencyProviding.swift */,
+				B6A5A4E4228A22BE00D78B38 /* ServiceProvider.swift */,
 				B6A5A4B8228A126F00D78B38 /* ServiceProviding.swift */,
 				B6A5A4B7228A126F00D78B38 /* UtilityProviding.swift */,
-				B6A5A4E4228A22BE00D78B38 /* ServiceProvider.swift */,
 				B6A5A4E6228A252C00D78B38 /* UtilityProvider.swift */,
 			);
 			path = DependencyProvider;
@@ -335,8 +335,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A5A48C228A117D00D78B38 /* LaunchScreen.storyboard in Resources */,
+				B6A5A4EB2291814000D78B38 /* UserViewController.xib in Resources */,
 				B6A5A489228A117D00D78B38 /* Assets.xcassets in Resources */,
-				B6A5A4AA228A124600D78B38 /* UserViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

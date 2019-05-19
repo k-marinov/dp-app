@@ -2,16 +2,25 @@ import UIKit
 
 class UserViewController: UIViewController {
 
-    var viewModel: UserViewModel!
-    @IBOutlet private weak var detailsLabel: UILabel!
+    private let viewModel: UserViewModel
+    @IBOutlet private var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setDetails()
     }
 
+    init(viewModel: UserViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     private func setDetails()  {
-        detailsLabel.text = viewModel.userDetails()
+        label.text = viewModel.userDetails()
     }
 
 }

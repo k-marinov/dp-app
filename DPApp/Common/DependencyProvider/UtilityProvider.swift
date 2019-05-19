@@ -1,25 +1,26 @@
 class UtilityProvider {
 
-    private var utilities: [String: Any] = [String: Any]()
+    private var instances = [String: Any]()
+
 
     func register(provider: DependencyProviding) -> AnalyticsTracker {
         let key = "\(AnalyticsTracker.self)"
-        if utilities[key] == nil {
+        guard let tracker = instances[key] as? AnalyticsTracker else {
             let tracker = AnalyticsTracker(provider: provider)
-            utilities[key] = tracker
+            instances[key] = tracker
             return tracker
         }
-        return utilities[key] as! AnalyticsTracker
+        return tracker
     }
 
     func register() -> HttpClient {
         let key = "\(HttpClient.self)"
-        if utilities[key] == nil {
+        guard let client = instances[key] as? HttpClient else {
             let client = HttpClient()
-            utilities[key] = client
+            instances[key] = client
             return client
         }
-        return utilities[key] as! HttpClient
+        return client
     }
 
 }
