@@ -16,19 +16,24 @@ class MockDependencyProvider: DependencyProviding {
     }
 
     func find<Mock>(_ type: Mock.Type) -> Mock {
-        return mocks["\(type.self)"] as! Mock
+        guard let mock = mocks["\(type.self)"] else {
+            print("@@@@@@ mocks", mocks)
+            fatalError("Mock with type=\(type.self) could not be found in the mocks dictionary")
+        }
+        return mock as! Mock
     }
 
-    func register<SERVICE>(provider: DependencyProviding) -> SERVICE where SERVICE : Service {
+    func register<SERVICE: Service>() -> SERVICE {
         let realClassKey: String = "\(SERVICE.self)"
-        let mockType = mockServiceType(with: provider, realClassKey: realClassKey)
-        addMock(key: "\(mockType)", value: mockType.init(provider: provider))
+        print("@@@@@@ mock register", realClassKey)
+        let mockType = mockServiceType(realClassKey: realClassKey)
+        addMock(key: "\(mockType)", value: mockType.init())
         return mocks["\(mockType)"] as! SERVICE
     }
 
-    func register(provider: DependencyProviding) -> AnalyticsTracker {
+    func register() -> AnalyticsTracker {
         let key: String = "\(MockAnalyticsTracker.self)"
-        addMock(key: key, value: MockAnalyticsTracker(provider: provider))
+        addMock(key: key, value: MockAnalyticsTracker())
         return mocks[key] as! AnalyticsTracker
     }
 
@@ -38,7 +43,7 @@ class MockDependencyProvider: DependencyProviding {
         return mocks[key] as! HttpClient
     }
 
-    private func mockServiceType(with provider: DependencyProviding, realClassKey: String) -> Service.Type {
+    private func mockServiceType(realClassKey: String) -> Service.Type {
         let mockServiceType: Service.Type? = serviceMocks[realClassKey]
         if mockServiceType == nil {
             fatalError("Service class \(realClassKey) is not mapped to mock service class"

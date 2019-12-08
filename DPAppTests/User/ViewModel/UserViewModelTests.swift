@@ -2,15 +2,18 @@ import XCTest
 
 @testable import DPApp
 
+var mockProvider: MockDependencyProvider = MockDependencyProvider()
+
 class UserViewModelTests: XCTestCase {
 
-    var mockProvider: MockDependencyProvider!
+    var mockProvider: MockDependencyProvider = MockDependencyProvider()
     var userViewModel: UserViewModel!
+
 
     override func setUp() {
         super.setUp()
-        mockProvider = MockDependencyProvider()
-        userViewModel = UserViewModel(provider: mockProvider)
+        DPApp.provider = mockProvider
+        userViewModel = UserViewModel()
     }
 
     func testUserDetails_whenHasName_appendsName() {
@@ -78,8 +81,8 @@ class UserViewModelTests: XCTestCase {
     // demonstrates adding mock class manually when has a convenience constructor
     func testConfiguration() {
         let creator = MockDependencyProvider()
-        creator.addMock(key: "\(MockUserService.self)", value: MockUserService(provider: MockDependencyProvider(), configuration: "MockConfiguration"))
-        userViewModel = UserViewModel(provider: creator)
+        creator.addMock(key: "\(MockUserService.self)", value: MockUserService(configuration: "MockConfiguration"))
+        userViewModel = UserViewModel()
 
         XCTAssertEqual(creator.find(MockUserService.self).configuration, "MockConfiguration")
     }

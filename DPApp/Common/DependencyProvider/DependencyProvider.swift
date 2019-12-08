@@ -3,12 +3,14 @@ class DependencyProvider: DependencyProviding {
     private let serviceProvider = ServiceProvider()
     private let utilityProvider = UtilityProvider()
     
-    func register<SERVICE: Service>(provider: DependencyProviding) -> SERVICE {
-        return serviceProvider.register(provider: provider)
+    
+    func register<SERVICE: Service>() -> SERVICE {
+        print("created service =\(SERVICE.self)")
+        return serviceProvider.register()
     }
 
-    func register(provider: DependencyProviding) -> AnalyticsTracker {
-        return utilityProvider.register(provider: provider)
+    func register() -> AnalyticsTracker {
+        return utilityProvider.register()
     }
 
     func register() -> HttpClient {

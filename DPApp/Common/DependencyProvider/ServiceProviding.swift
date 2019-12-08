@@ -1,5 +1,5 @@
-protocol ServiceProviding {
-
-    func register<SERVICE: Service>(provider: DependencyProviding) -> SERVICE
-
-}
+//protocol ServiceProviding {
+//
+//    func register<SERVICE: Service>() -> SERVICE
+//
+//}

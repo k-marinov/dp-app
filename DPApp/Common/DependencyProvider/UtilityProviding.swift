@@ -1,7 +1,7 @@
-protocol UtilityProviding {
-
-    func register(provider: DependencyProviding) -> AnalyticsTracker
-
-    func register() -> HttpClient
-
-}
+//protocol UtilityProviding {
+//
+//    func register() -> AnalyticsTracker
+//
+//    func register() -> HttpClient
+//
+//}

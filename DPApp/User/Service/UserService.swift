@@ -1,17 +1,19 @@
 class UserService: Service {
 
-    private let tracker: AnalyticsTracker
-    private let httpClient: HttpClient
+    @Dependency(provider.register)
+    private var tracker: AnalyticsTracker
+    
+    @Dependency(provider.register)
+    private var httpClient: HttpClient
+
     private(set) var configuration: String = ""
 
-    convenience init(provider: DependencyProviding, configuration: String = "DefaultConfiguration") {
-        self.init(provider: provider)
+    convenience init(configuration: String = "DefaultConfiguration") {
+        self.init()
         self.configuration = configuration
     }
 
-    required init(provider: DependencyProviding) {
-        tracker = provider.register(provider: provider)
-        httpClient = provider.register()
+    required init() {
     }
 
     func name() -> String {

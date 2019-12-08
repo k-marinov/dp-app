@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6817CF1239B11C600C42656 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6817CF0239B11C600C42656 /* main.swift */; };
+		B6817CF3239B122800C42656 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6817CF2239B122800C42656 /* AppConfiguration.swift */; };
+		B6817CF7239B157D00C42656 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6817CF6239B157D00C42656 /* Dependency.swift */; };
+		B6817CF9239B17A700C42656 /* DependencyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6817CF8239B17A700C42656 /* DependencyWrapper.swift */; };
 		B6A5A489228A117D00D78B38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6A5A488228A117D00D78B38 /* Assets.xcassets */; };
 		B6A5A48C228A117D00D78B38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A5A48A228A117D00D78B38 /* LaunchScreen.storyboard */; };
 		B6A5A4A7228A123900D78B38 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5A4A6228A123900D78B38 /* UserViewModel.swift */; };
@@ -47,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B6817CF0239B11C600C42656 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B6817CF2239B122800C42656 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		B6817CF6239B157D00C42656 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		B6817CF8239B17A700C42656 /* DependencyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyWrapper.swift; sourceTree = "<group>"; };
 		B6A5A47E228A117C00D78B38 /* DPApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DPApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A5A481228A117C00D78B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6A5A488228A117D00D78B38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 		B6A5A475228A117C00D78B38 = {
 			isa = PBXGroup;
 			children = (
+				B6817CF0239B11C600C42656 /* main.swift */,
 				B6A5A4EC22918C6000D78B38 /* README.md */,
 				B6A5A480228A117C00D78B38 /* DPApp */,
 				B6A5A495228A117D00D78B38 /* DPAppTests */,
@@ -135,6 +144,7 @@
 			children = (
 				B6A5A4C2228A129000D78B38 /* User */,
 				B6A5A498228A117D00D78B38 /* Info.plist */,
+				B6817CF8239B17A700C42656 /* DependencyWrapper.swift */,
 			);
 			path = DPAppTests;
 			sourceTree = "<group>";
@@ -143,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				B6A5A481228A117C00D78B38 /* AppDelegate.swift */,
+				B6817CF2239B122800C42656 /* AppConfiguration.swift */,
+				B6817CF6239B157D00C42656 /* Dependency.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -361,6 +373,7 @@
 				B6A5A4B3228A125700D78B38 /* Service.swift in Sources */,
 				B6A5A4E7228A252C00D78B38 /* UtilityProvider.swift in Sources */,
 				B6A5A4C1228A127E00D78B38 /* HttpClient.swift in Sources */,
+				B6817CF3239B122800C42656 /* AppConfiguration.swift in Sources */,
 				B6A5A4AB228A124600D78B38 /* UserViewController.swift in Sources */,
 				B6A5A4DA228A144500D78B38 /* UtilityProviding.swift in Sources */,
 				B6A5A4E8228A275100D78B38 /* DependencyProviding.swift in Sources */,
@@ -368,6 +381,8 @@
 				B6A5A4DC228A145500D78B38 /* DependencyProvider.swift in Sources */,
 				B6A5A4A7228A123900D78B38 /* UserViewModel.swift in Sources */,
 				B6A5A4DF228A14A800D78B38 /* AppDelegate.swift in Sources */,
+				B6817CF1239B11C600C42656 /* main.swift in Sources */,
+				B6817CF7239B157D00C42656 /* Dependency.swift in Sources */,
 				B6A5A4D9228A144100D78B38 /* ServiceProviding.swift in Sources */,
 				B6A5A4B0228A125700D78B38 /* AccountService.swift in Sources */,
 				B6A5A4E5228A22BE00D78B38 /* ServiceProvider.swift in Sources */,
@@ -386,6 +401,7 @@
 				B6A5A4D6228A12E000D78B38 /* MockFriendService.swift in Sources */,
 				B6A5A4CB228A12CF00D78B38 /* UserServiceTests.swift in Sources */,
 				B6A5A4D2228A12E000D78B38 /* MockAnalyticsTracker.swift in Sources */,
+				B6817CF9239B17A700C42656 /* DependencyWrapper.swift in Sources */,
 				B6A5A4E9228A276100D78B38 /* MockDependencyProvider.swift in Sources */,
 				B6A5A4D5228A12E000D78B38 /* MockAccountService.swift in Sources */,
 			);

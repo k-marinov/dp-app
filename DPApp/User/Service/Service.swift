@@ -1,5 +1,5 @@
 protocol Service {
 
-    init(provider: DependencyProviding)
+    init()
 
 }
