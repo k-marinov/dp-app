@@ -1,14 +1,13 @@
 class UserViewModel {
 
-    private let userService: UserService
-    private let accountService: AccountService
-    private let friendService: FriendService
 
-    required init(provider: DependencyProviding) {
-        userService = provider.register(provider: provider)
-        accountService = provider.register(provider: provider)
-        friendService = provider.register(provider: provider)
-    }
+    @Dependency(provider.register)
+    private var userService: UserService
+    @Dependency(provider.register)
+    private var accountService: AccountService
+    @Dependency(provider.register)
+    private var friendService: FriendService
+
 
     func userDetails() -> String {
         var details: String = ""

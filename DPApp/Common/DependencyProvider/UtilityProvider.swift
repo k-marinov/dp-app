@@ -1,12 +1,12 @@
-class UtilityProvider {
+class UtilityProvider { //}: UtilityProviding {
 
     private var instances = [String: Any]()
 
 
-    func register(provider: DependencyProviding) -> AnalyticsTracker {
+    func register() -> AnalyticsTracker {
         let key = "\(AnalyticsTracker.self)"
         guard let tracker = instances[key] as? AnalyticsTracker else {
-            let tracker = AnalyticsTracker(provider: provider)
+            let tracker = AnalyticsTracker()
             instances[key] = tracker
             return tracker
         }

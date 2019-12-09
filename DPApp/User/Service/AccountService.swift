@@ -1,6 +1,6 @@
 class AccountService: Service {
 
-    required init(provider: DependencyProviding) {
+    required init() {
         
     }
 

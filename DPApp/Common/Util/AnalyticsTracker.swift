@@ -1,10 +1,8 @@
 class AnalyticsTracker {
 
+    @Dependency(provider.register)
     private var httpClient: HttpClient
 
-    init(provider: DependencyProviding) {
-        httpClient = provider.register()
-    }
 
     func trackEvent(name: String) -> String {
         if httpClient.request() {
